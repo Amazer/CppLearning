@@ -1,0 +1,2 @@
+﻿  TestColor.cpp
+e:\cycgithub\cpplearning\e3d\teste3d\testcolor.cpp(4): fatal error C1083: Cannot open include file: '..\ECore\E3DHeader.h': No such file or directory
