@@ -1,0 +1,8 @@
+# .vs work setting
+.vs
+*.log
+*.lastbuildstate
+*.idb
+*.pdb
+*.obj
+*.tlog
