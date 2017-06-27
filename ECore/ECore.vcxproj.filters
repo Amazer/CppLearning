@@ -30,6 +30,9 @@
     <ClInclude Include="include\EVector.h">
       <Filter>include</Filter>
     </ClInclude>
+    <ClInclude Include="include\EMath.h">
+      <Filter>include</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\EMatrix.cpp">
