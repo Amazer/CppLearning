@@ -113,16 +113,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="E3DHeader.h" />
-    <ClInclude Include="ECommon.h" />
-    <ClInclude Include="EMatrix.h" />
-    <ClInclude Include="EUtil.h" />
-    <ClInclude Include="EVector.h" />
+    <ClInclude Include="include\E3DHeader.h" />
+    <ClInclude Include="include\ECommon.h" />
+    <ClInclude Include="include\EMatrix.h" />
+    <ClInclude Include="include\EUtil.h" />
+    <ClInclude Include="include\EVector.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="EMatrix.cpp" />
-    <ClCompile Include="EUtil.cpp" />
-    <ClCompile Include="EVector.cpp" />
+    <ClCompile Include="src\EMatrix.cpp" />
+    <ClCompile Include="src\EUtil.cpp" />
+    <ClCompile Include="src\EVector.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
