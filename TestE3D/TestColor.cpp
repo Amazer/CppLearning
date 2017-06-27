@@ -1,8 +1,8 @@
 //Test E3D Color32bit
 
 #include <iostream>
-#include "..\ECore\E3DHeader.h"
-#include "..\ECore\ECommon.h"
+#include "E3DHeader.h"
+#include "ECommon.h"
 using namespace std;
 using namespace E3D;
 std::string global_str;

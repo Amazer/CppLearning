@@ -43,7 +43,7 @@ namespace E3D
 	//字符串转换为整数
 	inline EInt StringToInt(const EString &str)
 	{
-		return atof(str.c_str());
+		return (EInt)atof(str.c_str());
 	}
 
 	//字符串转换为浮点数
