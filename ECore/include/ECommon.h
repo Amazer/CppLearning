@@ -70,10 +70,10 @@ namespace E3D
 	#define ECOLOR_32BIT(r,g,b,a) (((r)&0xff)<<24|((g)&0xff)<<16|((b)&0xff<<8)|((a)&0xff))
 
 	//ECOLOR结构定义
-	struct ECOLOR
+	struct EColor
 	{
 		EUChar r, g, b, a;
-		ECOLOR(EInt color, EUChar alpha = 255)
+		EColor(EInt color, EUChar alpha = 255)
 		{
 			r = (unsigned char)((color & 0xff0000) >> 16);
 			g = (unsigned char)((color & 0x00ff00) >> 8);
@@ -81,26 +81,26 @@ namespace E3D
 			a = alpha;
 		}
 
-		ECOLOR(EUChar ri = 0, EUChar gi = 0, EUChar bi = 0, EUChar ai = 255) :
+		EColor(EUChar ri = 0, EUChar gi = 0, EUChar bi = 0, EUChar ai = 255) :
 			r(ri), g(gi), b(bi), a(ai) {}
 
 		EInt ToInt() const { return ECOLOR_16BIT(r, g, b); }
 		EInt To16Bit() const { return ECOLOR_16BIT(r, g, b); }
 
-		ECOLOR operator *(const ECOLOR &c)const
+		EColor operator *(const EColor &c)const
 		{
 			EInt ri = r*c.r >> 8;			//r*c.r /256
 			EInt gi = g*c.g >> 8;
 			EInt bi = b*c.b >> 8;
 			EInt ai = a*c.a >> 8;
-			return ECOLOR(ri, gi, bi, ai);
+			return EColor(ri, gi, bi, ai);
 		}
 	};
 
-	struct ECOLOR32
+	struct EColor32
 	{
 		EUChar r, g, b, a;
-		ECOLOR32(EUInt color)
+		EColor32(EUInt color)
 		{
 			r = (unsigned char)((color & 0xff000000) >> 24);
 			g = (unsigned char)((color & 0x00ff0000) >> 16);
@@ -108,19 +108,19 @@ namespace E3D
 			a = (unsigned char)((color & 0x000000ff) );
 		}
 
-		ECOLOR32(EUChar ri , EUChar gi , EUChar bi , EUChar ai = 255) :
+		EColor32(EUChar ri , EUChar gi , EUChar bi , EUChar ai = 255) :
 			r(ri), g(gi), b(bi), a(ai) {}
 
 		EInt To16Bit() const { return ECOLOR_16BIT(r, g, b); }
 		EInt To32Bit() const { return ECOLOR_32BIT(r, g, b,a); }
 
-		ECOLOR32 operator *(const ECOLOR32 &c)const
+		EColor32 operator *(const EColor32 &c)const
 		{
 			EInt ri = r*c.r >> 8;			//r*c.r /256
 			EInt gi = g*c.g >> 8;
 			EInt bi = b*c.b >> 8;
 			EInt ai = a*c.a >> 8;
-			return ECOLOR32(ri, gi, bi, ai);
+			return EColor32(ri, gi, bi, ai);
 		}
 	};
 }
