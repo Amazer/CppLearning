@@ -116,6 +116,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="ELight.h" />
     <ClInclude Include="include\E3DHeader.h" />
     <ClInclude Include="include\ECommon.h" />
     <ClInclude Include="include\EMath.h" />
@@ -124,6 +125,7 @@
     <ClInclude Include="include\EVector.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="ELight.cpp" />
     <ClCompile Include="src\EMatrix.cpp" />
     <ClCompile Include="src\EUtil.cpp" />
     <ClCompile Include="src\EVector.cpp" />

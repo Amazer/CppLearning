@@ -33,6 +33,9 @@
     <ClInclude Include="include\EMath.h">
       <Filter>include</Filter>
     </ClInclude>
+    <ClInclude Include="ELight.h">
+      <Filter>include</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\EMatrix.cpp">
@@ -42,6 +45,9 @@
       <Filter>src</Filter>
     </ClCompile>
     <ClCompile Include="src\EVector.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="ELight.cpp">
       <Filter>src</Filter>
     </ClCompile>
   </ItemGroup>
