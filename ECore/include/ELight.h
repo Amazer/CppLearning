@@ -32,8 +32,31 @@ namespace E3D
 
 		EFloat			kc, kl, kq;		//衰减因子
 
+		EFloat			spot_inner;		//聚光灯内锥角
+		EFloat			spot_outer;		//聚光灯外锥角
+		EFloat			pf;				//聚光灯指数因子
+
+		ELight(EInt lightId, LIGHT_TYPE type);
+
 	};
 
+	//最大灯光数
+	#define MAX_LIGHTS 8
 
+	//全局灯光管理
+	extern std::vector<ELight*> *GLights;
+
+	typedef std::vector<ELight*>::iterator LightItr;
+
+	//创建一个新的灯光，创建成功返回灯光唯一id(全局唯一),创建失败则返回-1
+	//场景内最大光源数为MAX_LIGHTS
+	extern EInt CreateLight(LIGHT_TYPE lightType);
+
+	//获得一个灯光，如果灯光不存在，则返回NULL
+	extern ELight*	GetLight(EInt id);
+	extern EInt		GetLightSize();
+	
+	//清楚全部光源
+	extern void		DestroyAllLights();
 }
 

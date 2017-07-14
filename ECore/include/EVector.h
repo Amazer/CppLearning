@@ -266,10 +266,9 @@ namespace E3D
 	struct EVector4D
 	{
 		static EVector4D ZERO;
-		static EVector3D UNIT_X;
-		static EVector3D UNIT_Y;
-		static EVector3D UNIT_Z;
-		static EVector3D UNIT_W;		//源代码中没有W，先写上
+		static EVector4D UNIT_X;
+		static EVector4D UNIT_Y;
+		static EVector4D UNIT_Z;
 
 		EFloat x;
 		EFloat y;

@@ -15,10 +15,45 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\ECore.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\EFrustum.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ELight.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\EMath.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\EMatrix.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\EUtil.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\EVector.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
     <ClInclude Include="include\E3DHeader.h">
       <Filter>include</Filter>
     </ClInclude>
     <ClInclude Include="include\ECommon.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ECore.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\EFrustum.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ELight.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\EMath.h">
       <Filter>include</Filter>
     </ClInclude>
     <ClInclude Include="include\EMatrix.h">
@@ -30,25 +65,5 @@
     <ClInclude Include="include\EVector.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="include\EMath.h">
-      <Filter>include</Filter>
-    </ClInclude>
-    <ClInclude Include="ELight.h">
-      <Filter>include</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="src\EMatrix.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="src\EUtil.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="src\EVector.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="ELight.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
   </ItemGroup>
 </Project>
