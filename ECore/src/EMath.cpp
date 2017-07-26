@@ -100,9 +100,23 @@ namespace E3D
 	}
 
 	//4D向量X44向量
-	void GetVector4DMulMatrix44(const EVector4D &vec, const EMatrix44 &mat, EVector4D &result);
+	void GetVector4DMulMatrix44(const EVector4D &vec, const EMatrix44 &mat, EVector4D &result)
+	{
+		EFloat x = vec.x*mat.m[0][0] + vec.y*mat.m[1][0] + vec.z*mat.m[2][0] + mat.m[3][0];
+		EFloat y = vec.x*mat.m[0][1] + vec.y*mat.m[1][1] + vec.z*mat.m[2][1] + mat.m[3][1];
+		EFloat z = vec.x*mat.m[0][2] + vec.y*mat.m[1][2] + vec.z*mat.m[2][2] + mat.m[3][2];
+
+		result.x = x, result.y = y, result.z = z, result.w = 1;
+	}
 
 	//4D顶点X44向量
-	void GetVertex4DMulMatrix44(const EVector4D &vec, const EMatrix44 &mat, EVector4D &result);
+	void GetVertex4DMulMatrix44(const EVector4D &vec, const EMatrix44 &mat, EVertex4D &result)
+	{
+		EFloat x = vec.x*mat.m[0][0] + vec.y*mat.m[1][0] + vec.z*mat.m[2][0] + mat.m[3][0];
+		EFloat y = vec.x*mat.m[0][1] + vec.y*mat.m[1][1] + vec.z*mat.m[2][1] + mat.m[3][1];
+		EFloat z = vec.x*mat.m[0][2] + vec.y*mat.m[1][2] + vec.z*mat.m[2][2] + mat.m[3][2];
 
+		result.x = x, result.y = y, result.z = z, result.w = 1;
+
+	}
 }
