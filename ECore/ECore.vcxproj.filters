@@ -36,6 +36,9 @@
     <ClCompile Include="src\EVector.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="src\EGraphics.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\E3DHeader.h">
@@ -63,6 +66,9 @@
       <Filter>include</Filter>
     </ClInclude>
     <ClInclude Include="include\EVector.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\EGraphics.h">
       <Filter>include</Filter>
     </ClInclude>
   </ItemGroup>

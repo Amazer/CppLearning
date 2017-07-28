@@ -118,6 +118,7 @@
   <ItemGroup>
     <ClCompile Include="src\ECore.cpp" />
     <ClCompile Include="src\EFrustum.cpp" />
+    <ClCompile Include="src\EGraphics.cpp" />
     <ClCompile Include="src\ELight.cpp" />
     <ClCompile Include="src\EMath.cpp" />
     <ClCompile Include="src\EMatrix.cpp" />
@@ -129,6 +130,7 @@
     <ClInclude Include="include\ECommon.h" />
     <ClInclude Include="include\ECore.h" />
     <ClInclude Include="include\EFrustum.h" />
+    <ClInclude Include="include\EGraphics.h" />
     <ClInclude Include="include\ELight.h" />
     <ClInclude Include="include\EMath.h" />
     <ClInclude Include="include\EMatrix.h" />
