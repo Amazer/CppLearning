@@ -24,9 +24,9 @@ namespace E3D
 			valid = true;
 
 			pixels = new EColor(width*height);
-			for (EInt i = 0, i < getHeight(); ++i)
+			for (EInt i = 0; i < getHeight(); ++i)
 			{
-				for (EInt j = 0, j < getWidht(); ++j)
+				for (EInt j = 0; j < getWidht(); ++j)
 				{
 					COLORREF color = ::GetPixel(bitmapHDC,i,j);
 					pixels[j*width + i] = EColor(GetRValue(color), GetGValue(color), GetBValue(color));
@@ -36,11 +36,48 @@ namespace E3D
 		}
 	}
 
+	// -----------------------------
 	EBitmap::~EBitmap()
 	{
 		DeleteObject(hBitmap);
 		DeleteDC(bitmapHDC);
 		SafeDeleteArray(pixels);
+	}
+
+	// -----------------------------
+
+	EColor EBitmap::getPixel(EInt x, EInt y)
+	{
+		return pixels[y*pitch + x];
+	}
+
+	// -----------------------------
+
+	HINSTANCE GHInstance;
+
+	HBITMAP					EGraphics::GBufferedHandle;
+	HDC						EGraphics::GBufferedHDC;
+	HBRUSH					EGraphics::GBgBrush;
+	HPEN					EGraphics::GPen;
+	HINSTANCE  	 			EGraphics::GHInstance;
+	RECT					EGraphics::GBufferSize;
+	DIBSECTION				EGraphics::GDIBSection;
+	BYTE					*EGraphics::GDatas;
+	EInt					EGraphics::GPitch;
+
+
+	EFloat					*EGraphics::GZBuffer;
+
+	//---------------------------------
+
+	// 初始化绘图系统
+	bool EGraphics::initGraphics(HINSTANCE hinstance)
+	{
+		GBufferedHDC = ::CreateCompatibleDC(NULL);
+
+		//////////////////
+		BITMAPINFO info = { 0 };
+		info.bmiHeader.biSize = sizeof(info.bmiHeader);
 	}
 
 }
